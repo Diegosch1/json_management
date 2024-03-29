@@ -6,8 +6,8 @@ import java.io.IOException;
 import co.edu.uptc.model.JMArray;
 
 public class JMFileWriter {
-    public static void writeToFile(String directory, String fileName, JMArray<?> jsonArray) {
-        String filePath = directory + "/" + fileName + ".json";
+    public void writeToFile(String directory, JMArray<?> jsonArray) {
+        String filePath = directory;
         try (FileWriter fileWriter = new FileWriter(filePath)) {
             fileWriter.write(jsonArray.toString());
             System.out.println("Archivo JSON creado exitosamente en: " + filePath);
